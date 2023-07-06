@@ -1,11 +1,11 @@
  @font-face {
      font-family: light;
-     src: url(./RightGrotesk-Regular.ttf);
+     src: url(./asset/RightGrotesk-Regular.ttf);
  }
 
  @font-face {
      font-family: right;
-     src: url(./RightGrotesk-CompactBlack.otf);
+     src: url(./asset/RightGrotesk-CompactBlack.otf);
  }
 
  * {
@@ -18,22 +18,31 @@
      height: 100%;
      width: 100%;
  }
+ ::-webkit-scrollbar{
+     display: none;
+ }
+ #menu{
+     cursor: pointer;
+ }
 .menupage{
     position: absolute;
     left: -50%;
     top: 0;
     width: 35%;
-    height: 100vh;
-    background-color: yellow;
+    height: 95vh;
+    background-color: rgb(255, 255, 113);
     padding: 20px;
     z-index: 9999;
     transition: all ease 1s;
     overflow-y: scroll;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 #menu1{
    position: absolute;
    right: 20px;
    top: 10px;
+   cursor: pointer;
 }
 .menupage a{
     display: flex;
@@ -44,11 +53,14 @@
     font-weight: 900;
     font-family: right;
     color: #000;
+    transition: all .1s ease-in-out;
 }
 .menupage i{
     font-size: 40px;
 }
-
+.menupage a:hover {
+    transform: scaleY(1.2)
+}
 .menupage p{
     font-size: 22px;
     margin-top: 8px;
